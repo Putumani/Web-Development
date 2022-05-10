@@ -6,56 +6,136 @@
 
 /*------------------- Header/Navigation---------------- */
 
-#main-menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: whitesmoke;
+body{
+    background-image: url(../images/Background_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
     font-family: 'Belleza', sans-serif;
+    font-weight: 400;
+}
+
+#navigation
+{
+    background-color: white;
+}
+
+#navigation .container{
+    max-width: 90%;
+    margin: auto; 
+}
+
+#navigation .nav-bar{
     position: relative;
 }
 
-#main-menu .left-nav-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 0;
-}
-
-#main-menu .logo-area{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#main-menu .left-nav-links li,
-#main-menu .right-nav-links li,
-#main-menu .logo-area li{
-    list-style: none;
-}
-
-#main-menu .left-nav-links a,
-#main-menu .right-nav-links a,
-#main-menu .logo-area a{
-    color: black;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-#main-menu .logo-area img{
+#navigation .nav-bar .logo-area{
+    position: absolute;
+    left: 50%;
     padding: 10px;
-    width: 100px;
-    height: 100px;
+    transform: translate(-50%)
 }
 
-#main-menu .right-nav-links{
-    display: flex;
-    justify-content: space-between;
-    width: 10%;
-    right: 0;
+#navigation .nav-bar .logo-area a{
+    display: block ;
 }
+
+#navigation .nav-bar .logo-area a img{
+    width: 100px;
+}
+
+#navigation .main-menu{
+    text-align: right;
+}
+
+@media screen and (min-width: 1024px){
+    #navigation .main-menu{
+        display: block !important;
+        height: auto !important
+    }
+}
+
+#navigation .main-menu li{
+     display: inline-block;
+     padding: 43px 10px;
+}
+
+#navigation .main-menu ul li a{
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+    font-size: 16px;
+}
+
+#navigation .main-menu ul li a:hover{
+    background-color: black;
+    color: whitesmoke;
+} 
+
+#navigation .main-menu .nav-links li:nth-child(1),
+#navigation .main-menu .nav-links li:nth-child(2){
+    float: left;
+}
+
+
+/*-------------------screens under 767 pixel-------------*/
+
+@media screen  and (max-width: 767px){
+    #navigation .nav-bar .logo-area{
+        position: static;
+        transform: translateX(0%);
+    }
+
+    #navigation .nav-bar .logo-area a{
+        width: 80%;
+    }
+
+    #navigation .nav-bar .logo-area .burger-menu{
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        display: block;
+        width: 30px;
+        background: black;
+        padding: 15px 9px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #navigation .nav-bar .logo-area .burger-menu span{
+        display: block;
+        max-width: 90%;
+        margin: auto;
+        height: 2px;
+        background-color: whitesmoke;
+        margin-bottom: 4px;
+    }
+
+    #navigation .nav-bar .logo-area span:last-child{
+        margin-bottom: 0;
+    }
+
+    #navigation .main-menu{
+        text-align: center;
+    }
+
+    #navigation .main-menu li{
+        display: block;
+        float: none !important;
+        padding: 0 10px;
+    } 
+
+    #navigation .main-menu .nav-links li:nth-child(1){
+    display: none;
+    }
+} 
+
+
 
 /*------------------- Header/Navigation---------------- */

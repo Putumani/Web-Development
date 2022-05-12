@@ -2,9 +2,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Belleza', sans-serif;
 }
 
-/*------------------- Header/Navigation---------------- */
+/*------------------- Navigation-Top-Bar ---------------- */
 
 body{
     background-image: url(../images/Background_photo.jpg);
@@ -12,7 +13,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: 'Belleza', sans-serif;
     font-weight: 400;
 }
@@ -83,10 +84,129 @@ body{
     float: left;
 }
 
+/*------------------- Hero-Section ---------------- */
 
+#hero-section{
+    position: relative;
+    width: 100%;
+}
+
+#hero-section img{
+    width: 100%;
+    height: 100%;
+}
+
+#hero-section .sliders{
+    height: 655px;
+    display: none; 
+    overflow: hidden;
+}
+
+#hero-section .prev,
+#hero-section .nxt{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 58px;
+    cursor: pointer;
+    color: gray;
+    transition: 0.1s;
+    user-select: none;
+}
+
+#hero-section .prev:hover,
+#hero-section .nxt:hover{
+    color: #3498db
+}
+
+#hero-section .nxt{
+    right: 0;
+}
+
+#hero-section .dotsbox{
+    position: absolute;
+    left: 35%;
+    transform: translate(50%);
+    bottom: 20px;
+}
+
+#hero-section .dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid gray;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.active, #hero-section .dot:hover{
+    border-color: #3498db;
+}
+
+#hero-section .txt{
+    position: absolute;
+    color: black;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top: 40%;
+    left: 15%;
+    -webkit-animation-name: posi;
+    -webkit-animation-duration: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: 0.8}
+    to{opacity: 1}
+}
+
+
+@keyframes posi{
+    from{left: 25%;}
+    to{left: 15%;}
+}
+
+#hero-section .txt h1{
+    color: #3498db;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#hero-section .txt p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#hero-section img{
+    transform: scale(1.5, 1.5);
+    -webkit-animation-name: zoomin;
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+
+@keyframes zoomin{
+    from{transform: scale(1.1);}
+    to{transform: scale(1.5, 1.5);}
+}
+
+/* ----------------------------------------------------- */
 /*-------------------screens under 767 pixel-------------*/
+/* ----------------------------------------------------- */
 
 @media screen  and (max-width: 767px){
+
+    /* -----------Navigation-Top-Bar------------------- */
     #navigation .nav-bar .logo-area{
         position: static;
         transform: translateX(0%);
@@ -134,8 +254,34 @@ body{
     #navigation .main-menu .nav-links li:nth-child(1){
     display: none;
     }
+
+    /* ----------------Hero-Section---------------------- */
+    #hero-section .sliders{
+        height: 500px;
+    }
+
+    #hero-section .txt{
+        line-height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2s;
+        animation-name: posi2;
+        animation-duration: 2s;
+
+    }
+
+    @keyframes posi2{
+        from{top: 35%};
+        to{top: 50%;}
+    }
+
+    .txt h1{
+        font-size: 30px;
+    }
+
+    .txt p{
+        margin-right: 20px;
+    }
 } 
-
-
-
-/*------------------- Header/Navigation---------------- */

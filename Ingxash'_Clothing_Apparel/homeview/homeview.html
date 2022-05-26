@@ -6,113 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href="homeview_style.css">
     <title>Ingxash'</title>
 </head>
 <body>
 <!----------------- Navigation-Top-Bar---------------------------------->
-<div id="navigation">
-        <div class="container">
-            <nav class="nav-bar">
-                <div class="logo-area">                
-                    <a href="#">
-                        <img src="/images/ingxash_Logo.jpg" alt="Logo">
-                    </a>
-                    <span class="burger-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>           
-                </div>
-                    
-                <div class="main-menu">
-                    <ul class="nav-links">
-                        <li><a href="#">SEARCH</a></li>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">CART</a></li>
-                        <li><a href="#">PROFILE</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+<header id="navigation">
+    <div class="container">
+        <nav class="nav-bar">
+            <div class="logo-area">                
+                <a href="#">
+                    <img src="/images/ingxash_Logo.jpg" alt="Logo">
+                </a>
+                <span class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>           
+            </div>
+                
+            <div class="main-menu">
+                <ul class="nav-links">
+                    <li><a href="#">SEARCH</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">PROFILE</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
+</header>
 <!--------------------- Hero-Section ------------------------------------>
-    <div id="hero-section">
-        <div class="sliders fade" style="display: block";>
-            <div class="txt">
-                <h1>BUCKET HAT</h1>
-                <p>Ingxash Bucket Hat gives you that Kasi feel,
-                    <br>the one you want to "UKUBANGENA" when wearing it!!!</p>
-            </div>
-            <div class="bucket-hat" style="width: 100%; height: 100%">
-                <a href="#">
-                <img src="../images/ingxash_bucket_hat.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="sliders fade">
-            <div class="txt">
-                <h1>SNEAKER</h1>
-                <p>Ingxash fuses the iconic Cape Town Kasi vibe,
-                    <br>retro style and trends to create a great pair of sneakers</p>
-            </div>
-            <div class="sneakers" style="width: 100%; height: 100%">
-                <a href="#">
-                <img src="../images/Ingxash footwear.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="sliders fade">
-            <div class="txt">
-                <h1>GOLF T-SHIRT</h1>
-                <p>Ingxash Golf T-Shirt is light,
-                    <br>breathable and bit stretchy.
-                    <br>They'll keep you confortable throughout the day.</p>
-            </div>
-            <div class="golf-t-shirt" style="width: 100%; height: 100%">
-                <a href="#">
-                <img src="../images/ingxash_infinity_g_tees.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="sliders fade">
-            <div class="txt">
-                <h1>BOMBA JACKET</h1>
-                <p>Ingxash Bucket Hat gives you that Kasi feel,
-                    <br>the one you want to "UKUBANGENA" when wearing it!!!</p>
-            </div>
-            <div class="bomba-jacket" style="width: 100%; height: 100%">
-                <a href="#">
-                <img src="../images/Bomba_jacket.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="sliders fade">
-            <div class="txt">
-                <h1>BEDDING</h1>
-                <p>You wanna sleep like a baby?!!!
-                    <br>Say no more</p>
-            </div>
-            <div class="bedding" style="width: 100%; height: 100%">
-                <a href="#">
-                <img src="../images/Ingxash_bedding.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="prev-and-next-buttons">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="nxt" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <div class="dotsbox">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
+<section id="hero">
+    <div class="left-side">
+        <h4>Discount Offers</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with us</p>
+        <button>Shop now</button>
     </div>
+    <div class="right-side">
+        <img src="../images/heropic.png" alt="">
+    </div>
+</section>
+        
 <script src="homeview.js"></script>
 </body>
 </html>

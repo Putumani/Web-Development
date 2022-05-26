@@ -1,5 +1,5 @@
-const sliders = document.querySelectorAll('.sliders'),
-      dot = document.querySelectorAll('.dot');
+const sliders = document.querySelectorAll('.sliders');
+const dot = document.querySelectorAll('.dot');
 
 let counter = 1;
 slidefun(counter);
@@ -29,7 +29,7 @@ function resetTimer(){
 
 function slidefun(n){
     let i;
-    for(i = 0;i < sliders.length; i++){
+    for(i = 0; i < sliders.length; i++){
         sliders[i].style.display = "none";
     }
 
@@ -46,5 +46,5 @@ function slidefun(n){
     }
 
     sliders[counter - 1].style.display = "block";
-    dot[counter -1].classList.add('active')
+    dot[counter - 1].classList.add('active')
 }
